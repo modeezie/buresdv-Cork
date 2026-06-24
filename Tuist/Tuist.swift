@@ -1,7 +1,7 @@
 import ProjectDescription
 
 let config = Config(
-    compatibleXcodeVersions: .upToNextMajor("27"),
+    compatibleXcodeVersions: .upToNextMajor("27"), // extend support to macOS 27
     // fullHandle: "buresdv/cork",
     // url: "https://cloud.tuist.io",
     swiftVersion: .init(6, 0, 0),
