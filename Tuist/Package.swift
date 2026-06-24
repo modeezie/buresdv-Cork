@@ -4,18 +4,20 @@ import PackageDescription
 #if TUIST
     import ProjectDescription
 
-    let packageSettings: PackageSettings = .init(
-        // Customize the product types for specific package product
+        let packageSettings: PackageSettings = .init(
         productTypes: [
             "LaunchAtLogin": .staticFramework,
             "DavidFoundation": .staticFramework,
             "ButtonKit": .staticFramework
         ],
-        // FORCE OVERRIDE ALL EXTERNAL MODULE TARGET VALUES DIRECTLY
         targetSettings: [
-            .all: .settings(
-                base: [
-                    "MACOSX_DEPLOYMENT_TARGET": "14.0"
+            "SwiftSyntax": .settings(base: ["MACOSX_DEPLOYMENT_TARGET": "14.0"]),
+            "SwiftSyntaxMacros": .settings(base: ["MACOSX_DEPLOYMENT_TARGET": "14.0"]),
+            "SwiftCompilerPluginMessageHandling": .settings(base: ["MACOSX_DEPLOYMENT_TARGET": "14.0"]),
+            "CustomDump": .settings(base: ["MACOSX_DEPLOYMENT_TARGET": "14.0"])
+        ]
+    )
+
                 ]
             )
         ]
