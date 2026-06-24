@@ -290,7 +290,7 @@ let project = Project(
         base: [
             "SWIFT_VERSION": "6.0",
             "MARKETING_VERSION": .init(stringLiteral: version),
-            "CURRENT_PROJECT_VERSION": .init(stringLiteral: build)
+            "CURRENT_PROJECT_VERSION": .init(stringLiteral: build),
             "MACOSX_DEPLOYMENT_TARGET": "14.0"
         ],
         configurations: [
