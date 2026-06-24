@@ -4,7 +4,7 @@ import PackageDescription
 #if TUIST
     import ProjectDescription
 
-        let packageSettings: PackageSettings = .init(
+    let packageSettings: PackageSettings = .init(
         productTypes: [
             "LaunchAtLogin": .staticFramework,
             "DavidFoundation": .staticFramework,
@@ -15,11 +15,6 @@ import PackageDescription
             "SwiftSyntaxMacros": .settings(base: ["MACOSX_DEPLOYMENT_TARGET": "14.0"]),
             "SwiftCompilerPluginMessageHandling": .settings(base: ["MACOSX_DEPLOYMENT_TARGET": "14.0"]),
             "CustomDump": .settings(base: ["MACOSX_DEPLOYMENT_TARGET": "14.0"])
-        ]
-    )
-
-                ]
-            )
         ]
     )
 #endif
