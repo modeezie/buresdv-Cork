@@ -12,7 +12,12 @@ import PackageDescription
             "LaunchAtLogin": .staticFramework,
             "DavidFoundation": .staticFramework,
             "ButtonKit": .staticFramework
-        ]
+        ],
+        baseSettings: .settings(
+            base: [
+                "MACOSX_DEPLOYMENT_TARGET": "14.0" // 🌟 Forces all external packages (like swift-syntax and custom-dump) to macOS 14
+            ]
+        )
     )
 #endif
 
